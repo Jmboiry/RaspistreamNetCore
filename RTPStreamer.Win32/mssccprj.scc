@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[RTPStreamerWin32.csproj]
+SCC_Aux_Path = "D:\source\repos\SS"
+SCC_Project_Name = "$/NetCore/RaspiCam/RTPStreamerWin32", ZHCAAAAA
+
+[RTPStreamer.Win32.csproj]
+SCC_Aux_Path = "D:\source\repos\SS"
+SCC_Project_Name = "$/NetCore/RaspiCam/RTPStreamer.Win32", ZHCAAAAA

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D22DDA3-0211-472F-B9BF-1774B27D5199}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RTPStreamer</RootNamespace>
+    <AssemblyName>RTPStreamer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.2\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.2\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\MultiCastSSMMediaSubsession.cs" />
+    <Compile Include="Core\MultiFramedRTPFramer.cs" />
+    <Compile Include="Core\RTCPConstants.cs" />
+    <Compile Include="Core\RTCPPacket.cs" />
+    <Compile Include="Core\RTCPReceiverPacket.cs" />
+    <Compile Include="Core\RTCPRRRecord.cs" />
+    <Compile Include="Core\RTCPSDSEReport.cs" />
+    <Compile Include="Core\RTCPSRPacket.cs" />
+    <Compile Include="Core\RTPFramer.cs" />
+    <Compile Include="Core\RTPMulticastStream.cs" />
+    <Compile Include="Core\RTPSessionState.cs" />
+    <Compile Include="Core\RTPStream.cs" />
+    <Compile Include="Core\RTPTransmissionStat.cs" />
+    <Compile Include="Core\RTPTransmissionStatsDB.cs" />
+    <Compile Include="Core\RTPUnicastStream.cs" />
+    <Compile Include="Core\SDESItem.cs" />
+    <Compile Include="Core\ServerMediaSubsession.cs" />
+    <Compile Include="Core\UnicastMediaSubsession.cs" />
+    <Compile Include="H264\AvcNalUnitType.cs" />
+    <Compile Include="H264\H264Fragmenter.cs" />
+    <Compile Include="H264\H264MulticastVideoCaptureSubsession.cs" />
+    <Compile Include="H264\H264Parser.cs" />
+    <Compile Include="H264\H264VideoCaptureMediaSubsession.cs" />
+    <Compile Include="H264\H264VideoRTPFramer.cs" />
+    <Compile Include="H264\PiCameraH264Broadcaster.cs" />
+    <Compile Include="Http\HttpRequestParser.cs" />
+    <Compile Include="Media\ServerMediaSession.cs" />
+    <Compile Include="Network\DatagramTransport.cs" />
+    <Compile Include="Network\Destination.cs" />
+    <Compile Include="Network\INetworkTransport.cs" />
+    <Compile Include="Network\SocketExtensions.cs" />
+    <Compile Include="Network\TCPTransport.cs" />
+    <Compile Include="Network\TimeVal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RTSP\RTSPClientConnection.cs" />
+    <Compile Include="RTSP\RTSPRequestParser.cs" />
+    <Compile Include="RTSP\RTSPServer.cs" />
+    <Compile Include="RTSP\RTSPSession.cs" />
+    <Compile Include="Tools\BitStream.cs" />
+    <Compile Include="Tools\DateTimeGenerator.cs" />
+    <Compile Include="Tools\HeaderDictionary.cs" />
+    <Compile Include="Tools\OutPacketBuffer.cs" />
+    <Compile Include="Tools\RTPTime.cs" />
+    <Compile Include="Tools\StringParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Camera.Win32\Camera.Win32.csproj">
+      <Project>{394c99cd-8d05-4454-839b-afaf8fc97281}</Project>
+      <Name>Camera.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

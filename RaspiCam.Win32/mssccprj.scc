@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[ConsoleApp.csproj]
+SCC_Aux_Path = "D:\source\repos\SS"
+SCC_Project_Name = "$/NetCore/RaspiCam/ConsoleApp", BYAAAAAA
+
+[RaspiCam.Win32.csproj]
+SCC_Aux_Path = "D:\source\repos\SS"
+SCC_Project_Name = "$/NetCore/RaspiCam/RaspiCam.Win32", BYAAAAAA
