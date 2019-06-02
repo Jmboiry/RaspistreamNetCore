@@ -12,7 +12,7 @@ Net.Core 2.1 installed on the Pi and on the build computer.
 
 **Compile and publish for Raspberry Pi**
 
-On the build computer with Visual Code or terminal:
+On the build computer with Visual Code or from a terminal:
 
 dotnet publish -c Release -r linux-arm RaspiCam.sln
 
