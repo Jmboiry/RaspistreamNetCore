@@ -20,7 +20,7 @@ Copy the entire RaspiStream/bin/Release/netcoreapp2.1/linux-arm/publish director
 
 Edit /etc/hosts and add a line "Your external IP" name (where name is the name of your Pi on your network)
 
-*Run*
+**Run**
 
 Run ./RaspiStream
 
