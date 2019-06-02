@@ -5,7 +5,9 @@
 **Prerequisites**
 
 A Raspberry Pi 3.
+
 A camera connected to the Pi (and enabled).
+
 Net.Core 2.1 installed on the Pi and on the build computer.
 
 **Compile and publish for Raspberry Pi**
