@@ -1,9 +1,9 @@
 # raspistreamnetcore
 
-Compile the project from Visual Code or the terminal:
-1
+Step 1 : Compile the project from Visual Code or the terminal:
+
 compile and publish for the Raspberry Pi:
-1
+
 dotnet publish -c Release -r linux-arm RaspiCam.sln
 
-2 
+ 
