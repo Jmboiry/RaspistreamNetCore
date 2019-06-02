@@ -1,5 +1,10 @@
 # raspistreamnetcore
-Install Net.Core 2.1 on the Raspberry Pi and on the build computer.
+
+Prerequisites
+
+A Raspberry Pi 3
+A camera connected to the Pi (and enabled)
+Net.Core 2.1 installed on the Piand on the build computer.
 
 Compile and publish for Raspberry Pi:
 
